@@ -113,39 +113,8 @@
 	        <div class="content">
 	            <div class="container-fluid">
 	                <div class="row">
-						<div class="col-md-12">
-							<div class="card">
-								<div class="card-header" data-background-color="purple">
-									<h4 class="title">Book List</h4>
-									<p class="category">Choose your favorite book</p>
-								</div>
-								<div class="card-content table-responsive">
-									<table class="table" id="table">
-										<thead class="text-primary">
-										<th>Title</th>
-										<th>Author</th>
-										<th>Price</th>
-										<th>Action</th>
-										</thead>
-										<tbody>
-										<!--<tr>
-											<td>My Title</td>
-											<td>My Author</td>
-											<td>100,000</td>
-											<td class="text-primary">
-												<button type="button" rel="tooltip" title="Add to Cart" class="btn btn-primary btn-simple btn-xs" />
-													<i class="material-icons">add_shopping_cart</i>
 
-											</td>
-										</tr>-->
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
-
-
-					</div>
+	                </div>
 	            </div>
 	        </div>
 			<footer class="footer">
@@ -159,8 +128,6 @@
 	                        </li>
 
 	                    </ul>
-
-
 	                </nav>
 	                <p class="copyright pull-right">
 	                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
@@ -191,32 +158,6 @@
 
 	<!-- Material Dashboard DEMO methods, don't include it in your project! -->
 	<script src="../assets/js/demo.js"></script>
-
-<script type="text/javascript">
-	$(document).ready(function() {
-		var jsonData = [
-			{ 'title': 'From C to Java', 'author':'duke', 'year':'2011' },
-			{ 'title': 'Learn Java in a Week', 'author':'duke jr', 'year':'2015' }
-		];
-		$.ajax({
-			url: '/services/books',
-			data: {
-				format: 'json'
-			},
-			error: function(req, status, err) {
-				alert(status);
-			},
-			dataType: 'json',
-			success: function(jsonData) {
-				for (i in jsonData) {
-					$('#table > tbody:last').append('<tr><td>'+jsonData[i].title+'</td>  <td>'+ jsonData[i].author +'</td>  <td>'+ jsonData[i].year+'</td> <td class="text-primary"> <button type="button" rel="tooltip" title="Add to Cart" class="btn btn-primary btn-simple btn-xs"> <i class="material-icons">add_shopping_cart</i> </td></tr>');
-				}
-			},
-			type: 'GET'
-		});
-	});
-</script>
-
 
 
 </html>
