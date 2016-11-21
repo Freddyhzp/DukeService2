@@ -1,7 +1,7 @@
 package demo;
 
 import com.google.gson.Gson;
-import org.codehaus.jettison.json.JSONObject;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,7 +21,7 @@ public class Servlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        Book b = new Book();
+        BookDetail b = new BookDetail();
         Gson gson = new Gson();
         String json = gson.toJson(b);
         response.setContentType("application/json");
